@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
 const productRoute = require("./routes/productRoute");
-
-app.use("/product", productRoute);
+const userRoute = require("./routes/userRoute");
 
 app.use(express.json());
+
+app.use("/product", productRoute);
+app.use("/user", userRoute);
 
 module.exports = app;
